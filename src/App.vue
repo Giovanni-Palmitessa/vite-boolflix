@@ -43,6 +43,8 @@ export default {
           },
         })
         .then((response) => (this.store.seriesList = response.data.results));
+
+      this.store.searchStr = "";
     },
   },
 };

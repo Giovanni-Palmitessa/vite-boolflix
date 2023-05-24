@@ -18,15 +18,17 @@ export default {
 <template>
   <main>
     <div class="container">
+      <h2>Film</h2>
       <div class="contents">
-        <h2>Film</h2>
         <AppFilm
           v-for="films in store.filmList"
           :key="films.id"
           :filmInfo="films"
         />
+      </div>
 
-        <h2>Serie TV</h2>
+      <h2 class="series">Serie TV</h2>
+      <div class="contents">
         <AppSeries
           v-for="series in store.seriesList"
           :key="series.id"
@@ -38,6 +40,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.series {
+  margin-top: 2rem;
+}
 .contents {
   display: flex;
   flex-wrap: wrap;
