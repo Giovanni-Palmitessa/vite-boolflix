@@ -1,5 +1,17 @@
 <script>
-export default {};
+import { store } from "../store";
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+  methods: {
+    emitSearchEvent() {
+      this.$emit("performSearch");
+    },
+  },
+};
 </script>
 <template>
   <header>

@@ -22,6 +22,7 @@ export default {
             api_key: this.store.myKey,
             include_adult: true,
             language: "it-IT",
+            query: this.store.searchStr,
           },
           headers: {
             accept: "application/json",
@@ -34,7 +35,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @performSearch="requestDataFromApi" />
   <AppMainContent />
 </template>
 
