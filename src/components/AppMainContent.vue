@@ -14,9 +14,23 @@ export default {
 };
 </script>
 <template>
-  <div class="container">
-    <AppFilm />
-  </div>
+  <main>
+    <div class="container">
+      <div class="contents">
+        <AppFilm
+          v-for="films in store.filmList"
+          :key="films.id"
+          :filmInfo="films"
+        />
+      </div>
+    </div>
+  </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+</style>
