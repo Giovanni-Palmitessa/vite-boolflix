@@ -20,6 +20,7 @@ export default {
 
       <div class="searchbar">
         <input
+          class="inputSearch"
           type="text"
           placeholder="Cerca qualcosa da guardare..."
           v-model="store.searchStr"
@@ -45,6 +46,12 @@ header {
     color: red;
     font-size: 1.8rem;
     font-weight: 700;
+  }
+  .inputSearch {
+    padding: 0.7rem 2rem;
+  }
+  button {
+    padding: 0.7rem;
   }
 }
 </style>

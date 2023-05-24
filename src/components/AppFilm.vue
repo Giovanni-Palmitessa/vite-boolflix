@@ -21,5 +21,6 @@ export default {
 <style lang="scss" scoped>
 .cardContent {
   width: calc((100% - 4rem) / 5);
+  margin-top: 1.5rem;
 }
 </style>
