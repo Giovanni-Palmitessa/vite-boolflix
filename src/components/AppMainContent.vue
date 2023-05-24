@@ -27,7 +27,7 @@ export default {
         />
       </div>
 
-      <h2 class="series">Serie TV</h2>
+      <h2>Serie TV</h2>
       <div class="contents">
         <AppSeries
           v-for="series in store.seriesList"
@@ -40,7 +40,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.series {
+h2 {
   margin-top: 2rem;
 }
 .contents {
