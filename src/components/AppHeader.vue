@@ -26,7 +26,8 @@ header {
   }
   .logo {
     color: red;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
   }
 }
 </style>
