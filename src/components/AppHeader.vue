@@ -25,7 +25,7 @@ export default {
           v-model="store.searchStr"
           @keyup.enter="emitSearchEvent"
         />
-        <button>Cerca</button>
+        <button @click="emitSearchEvent">Cerca</button>
       </div>
     </div>
   </header>
