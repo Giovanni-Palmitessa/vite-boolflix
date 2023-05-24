@@ -31,7 +31,7 @@ export default {
         .then((response) => (this.store.filmList = response.data.results));
 
       axios
-        .get("https://api.themoviedb.org/3/search/movie", {
+        .get("https://api.themoviedb.org/3/search/tv", {
           params: {
             api_key: this.store.myKey,
             include_adult: true,
@@ -42,7 +42,7 @@ export default {
             accept: "application/json",
           },
         })
-        .then((response) => (this.store.filmList = response.data.results));
+        .then((response) => (this.store.seriesList = response.data.results));
     },
   },
 };
