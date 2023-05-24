@@ -19,11 +19,15 @@ export default {
       axios
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
-            name: this.store.searchStr,
-            status: this.store.searchStatus,
+            api_key: this.store.myKey,
+            include_adult: true,
+            language: "it-IT",
+          },
+          headers: {
+            accept: "application/json",
           },
         })
-        .then((response) => (this.store.characterList = response.data.results));
+        .then((response) => (this.store.filmList = response.data.results));
     },
   },
 };
