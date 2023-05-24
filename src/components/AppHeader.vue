@@ -19,7 +19,12 @@ export default {
       <div class="logo">BOOLFLIX</div>
 
       <div class="searchbar">
-        <input type="text" />
+        <input
+          type="text"
+          placeholder="Cerca qualcosa da guardare..."
+          v-model="store.searchStr"
+          @keyup.enter="emitSearchEvent"
+        />
         <button>Cerca</button>
       </div>
     </div>

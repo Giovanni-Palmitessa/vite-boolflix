@@ -10,8 +10,8 @@ export default {
 <template>
   <div class="cardFilm">
     <ul>
-      <li>{{ filmInfo.original_name }}</li>
-      <li>{{ filmInfo.name }}</li>
+      <li>{{ filmInfo.original_title }}</li>
+      <li>{{ filmInfo.title }}</li>
       <li>{{ filmInfo.original_language }}</li>
       <li>{{ filmInfo.vote_average }}</li>
     </ul>
