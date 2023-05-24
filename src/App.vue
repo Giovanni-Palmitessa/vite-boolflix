@@ -29,6 +29,20 @@ export default {
           },
         })
         .then((response) => (this.store.filmList = response.data.results));
+
+      axios
+        .get("https://api.themoviedb.org/3/search/movie", {
+          params: {
+            api_key: this.store.myKey,
+            include_adult: true,
+            language: "it-IT",
+            query: this.store.searchStr,
+          },
+          headers: {
+            accept: "application/json",
+          },
+        })
+        .then((response) => (this.store.filmList = response.data.results));
     },
   },
 };
