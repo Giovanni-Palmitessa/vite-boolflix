@@ -1,33 +1,6 @@
 <script>
-import { store } from "../store";
-export default {
-  data() {
-    return {
-      store,
-    };
-  },
-  props: {
-    filmInfo: {
-      type: Object,
-    },
-  },
-};
+export default {};
 </script>
-
-<!-- DA QUI GIUSTO -->
-<!-- <template>
-  <div class="cardContent">
-    <ul>
-      <li>{{ filmInfo.original_title }}</li>
-      <li>{{ filmInfo.title }}</li>
-      <li>{{ filmInfo.original_language }}</li>
-      <li>{{ filmInfo.vote_average }}</li>
-      <img :src="store.baseURLimg + filmInfo.poster_path" />
-    </ul>
-  </div>
-</template> -->
-<!-- A QUI GIUSTO -->
-
 <template>
   <div class="card">
     <div class="image">
@@ -46,19 +19,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// ---DA QUI GIUSTO
-// .cardContent {
-//   width: calc((100% - 4rem) / 5);
-//   margin-top: 1.5rem;
-//   img {
-//     width: 100%;
-//   }
-// }
-// ---A QUI GIUSTO
-
 .card {
-  position: relative;
-  width: calc((100% - 4rem) / 5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
   height: 400px;
   background: #000;
 }
@@ -79,7 +45,6 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 70%; /*100%*/
   height: 100%;
   background: #ffc107;
