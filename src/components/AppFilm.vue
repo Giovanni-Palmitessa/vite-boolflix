@@ -23,7 +23,6 @@ export default {
 <template>
   <div class="card">
     <div class="image">
-      <!-- <img :src="store.baseURLimg + filmInfo.poster_path" alt="No Image" /> -->
       <img
         v-if="filmInfo.poster_path"
         :src="store.baseURLimg + filmInfo.poster_path"
