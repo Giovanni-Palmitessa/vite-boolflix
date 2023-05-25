@@ -20,7 +20,7 @@ export default {
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
             api_key: this.store.myKey,
-            include_adult: true,
+            include_adult: false,
             language: "it-IT",
             query: this.store.searchStr,
           },

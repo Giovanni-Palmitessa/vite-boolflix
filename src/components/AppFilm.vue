@@ -31,7 +31,7 @@ export default {
 <template>
   <div class="card">
     <div class="image">
-      <img :src="store.baseURLimg + filmInfo.poster_path" />
+      <img :src="store.baseURLimg + filmInfo.poster_path" alt="No Image" />
     </div>
     <div class="details">
       <div class="center">
@@ -61,6 +61,7 @@ export default {
   width: calc((100% - 4rem) / 5);
   height: 400px;
   background: #000;
+  border: 1px solid black;
 }
 .card .image {
   width: 100%;
@@ -69,6 +70,7 @@ export default {
 }
 .card .image img {
   width: 100%;
+  height: 100%;
   transition: 0.5s;
 }
 .card:hover .image img {
@@ -82,7 +84,7 @@ export default {
   bottom: 0;
   width: 70%; /*100%*/
   height: 100%;
-  background: #ffc107;
+  background: red;
   transition: 0.5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(-90deg);
@@ -91,7 +93,8 @@ export default {
   transform: perspective(2000px) rotateY(0deg);
 }
 .card .details .center {
-  padding: 20px;
+  padding: 40px;
+  max-width: 100%;
   text-align: center;
   background: #fff;
   position: absolute;
