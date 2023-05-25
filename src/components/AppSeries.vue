@@ -20,6 +20,7 @@ export default {
       <li>{{ seriesInfo.name }}</li>
       <li>{{ seriesInfo.original_language }}</li>
       <li>{{ seriesInfo.vote_average }}</li>
+      <img :src="store.baseURLimg + seriesInfo.poster_path" />
     </ul>
   </div>
 </template>
@@ -28,5 +29,8 @@ export default {
 .cardContent {
   width: calc((100% - 4rem) / 5);
   margin-top: 1.5rem;
+  img {
+    width: 100%;
+  }
 }
 </style>
