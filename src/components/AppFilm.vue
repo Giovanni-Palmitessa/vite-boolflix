@@ -82,7 +82,7 @@ export default {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 70%; /*100%*/
+  width: 80%; /*100%*/
   height: 100%;
   background: red;
   transition: 0.5s;
