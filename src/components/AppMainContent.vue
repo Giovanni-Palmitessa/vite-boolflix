@@ -42,6 +42,8 @@ export default {
 <style lang="scss" scoped>
 main {
   padding-bottom: 2rem;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
   background-color: rgb(57, 52, 52);
 }
 h2 {

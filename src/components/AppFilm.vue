@@ -40,6 +40,11 @@ export default {
         </h2>
         <p>{{ filmInfo.original_language }}</p>
         <p>{{ filmInfo.vote_average }}</p>
+        <p>
+          <font-awesome-icon icon="fa-solid fa-star" />
+          <font-awesome-icon icon="fa-regular fa-star" />
+          <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
+        </p>
       </div>
     </div>
   </div>
