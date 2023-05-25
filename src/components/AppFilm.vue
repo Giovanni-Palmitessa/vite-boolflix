@@ -1,5 +1,11 @@
 <script>
+import { store } from "../store";
 export default {
+  data() {
+    return {
+      store,
+    };
+  },
   props: {
     filmInfo: {
       type: Object,
@@ -14,6 +20,7 @@ export default {
       <li>{{ filmInfo.title }}</li>
       <li>{{ filmInfo.original_language }}</li>
       <li>{{ filmInfo.vote_average }}</li>
+      <img :src="store.baseURLimg + filmInfo.poster_path" />
     </ul>
   </div>
 </template>
@@ -22,5 +29,8 @@ export default {
 .cardContent {
   width: calc((100% - 4rem) / 5);
   margin-top: 1.5rem;
+  img {
+    width: 100%;
+  }
 }
 </style>
