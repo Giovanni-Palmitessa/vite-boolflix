@@ -55,7 +55,12 @@ header {
     padding: 0.7rem 2rem;
   }
   button {
-    padding: 0.7rem;
+    background-color: red;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 0.8rem;
+    color: white;
+    font-weight: 700;
   }
 }
 </style>
