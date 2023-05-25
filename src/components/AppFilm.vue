@@ -59,7 +59,7 @@ export default {
 .card {
   position: relative;
   width: calc((100% - 3rem) / 4);
-  height: 400px;
+  height: 500px;
   background: #000;
   border: 1px solid black;
 }
