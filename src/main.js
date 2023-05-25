@@ -13,11 +13,6 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 
 /* Transform iso string in flags */
 
-// import Vue from "vue";
-// import CountryFlag from "vue-country-flag";
-
-// Vue.component("country-flag", CountryFlag);
-
 /* add icons to the library */
 library.add(fas);
 library.add(far);

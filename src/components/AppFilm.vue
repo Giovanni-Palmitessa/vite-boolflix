@@ -1,6 +1,12 @@
 <script>
 import { store } from "../store";
 export default {
+  methods: {
+    ConvertVote(vote) {
+      const convertedVote = Math.ceil((vote / 10) * 5);
+      return convertedVote;
+    },
+  },
   data() {
     return {
       store,
@@ -14,20 +20,6 @@ export default {
 };
 </script>
 
-<!-- DA QUI GIUSTO -->
-<!-- <template>
-  <div class="cardContent">
-    <ul>
-      <li>{{ filmInfo.original_title }}</li>
-      <li>{{ filmInfo.title }}</li>
-      <li>{{ filmInfo.original_language }}</li>
-      <li>{{ filmInfo.vote_average }}</li>
-      <img :src="store.baseURLimg + filmInfo.poster_path" />
-    </ul>
-  </div>
-</template> -->
-<!-- A QUI GIUSTO -->
-
 <template>
   <div class="card">
     <div class="image">
@@ -39,31 +31,13 @@ export default {
           {{ filmInfo.title }}<br /><span>{{ filmInfo.original_title }}</span>
         </h2>
         <p>{{ filmInfo.original_language }}</p>
-        <!-- <p>
-          <country-flag :country="filmInfo.original_language" size="small" />
-        </p> -->
         <p>{{ filmInfo.vote_average }}</p>
-        <p>
-          <font-awesome-icon icon="fa-solid fa-star" />
-          <font-awesome-icon icon="fa-regular fa-star" />
-          <font-awesome-icon icon="fa-solid fa-star-half-stroke" />
-        </p>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-// ---DA QUI GIUSTO
-// .cardContent {
-//   width: calc((100% - 4rem) / 5);
-//   margin-top: 1.5rem;
-//   img {
-//     width: 100%;
-//   }
-// }
-// ---A QUI GIUSTO
-
 .card {
   position: relative;
   width: calc((100% - 4rem) / 5);
