@@ -1,6 +1,12 @@
 <script>
 import { store } from "../store";
 export default {
+  methods: {
+    ConvertVote(vote) {
+      const convertedVote = Math.ceil((vote / 10) * 5);
+      return convertedVote;
+    },
+  },
   data() {
     return {
       store,
