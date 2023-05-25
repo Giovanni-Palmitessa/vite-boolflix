@@ -48,6 +48,7 @@ header {
     font-weight: 700;
   }
   .inputSearch {
+    width: 300px;
     padding: 0.7rem 2rem;
   }
   button {
