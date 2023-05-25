@@ -31,7 +31,20 @@ export default {
           {{ filmInfo.title }}<br /><span>{{ filmInfo.original_title }}</span>
         </h2>
         <p>{{ filmInfo.original_language }}</p>
-        <p>{{ filmInfo.vote_average }}</p>
+        <font-awesome-icon
+          class="star"
+          v-for="star in ConvertVote(filmInfo.vote_average)"
+          :key="star"
+          :icon="['fas', 'star']"
+        />
+        <template v-for="star in 5 - ConvertVote(filmInfo.vote_average)">
+          <font-awesome-icon
+            class="star"
+            :key="star"
+            :icon="['far', 'star']"
+            v-if="ConvertVote(filmInfo.vote_average) < 5"
+          />
+        </template>
       </div>
     </div>
   </div>
