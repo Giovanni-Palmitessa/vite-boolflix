@@ -94,7 +94,9 @@ export default {
 }
 .card .details .center {
   padding: 40px;
-  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
   text-align: center;
   background: #fff;
   position: absolute;

@@ -40,8 +40,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+main {
+  padding-bottom: 2rem;
+  background-color: rgb(57, 52, 52);
+}
 h2 {
-  margin-top: 2rem;
+  padding-top: 2rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
 }
 .contents {
   display: flex;
