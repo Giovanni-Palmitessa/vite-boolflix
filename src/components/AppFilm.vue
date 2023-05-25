@@ -35,7 +35,7 @@ export default {
         <h2>
           {{ filmInfo.title }}<br /><span>{{ filmInfo.original_title }}</span>
         </h2>
-        <p>{{ filmInfo.original_language }}</p>
+        <p><lang-flag :iso="filmInfo.original_language" /></p>
         <font-awesome-icon
           class="star"
           v-for="star in ConvertVote(filmInfo.vote_average)"
