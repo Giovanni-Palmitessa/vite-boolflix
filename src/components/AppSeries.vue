@@ -20,18 +20,6 @@ export default {
 };
 </script>
 <template>
-  <!-- DA QUI GIUSTO -->
-  <!-- <div class="cardContent">
-    <ul>
-      <li>{{ seriesInfo.original_name }}</li>
-      <li>{{ seriesInfo.name }}</li>
-      <li>{{ seriesInfo.original_language }}</li>
-      <li>{{ seriesInfo.vote_average }}</li>
-      <img :src="store.baseURLimg + seriesInfo.poster_path" />
-    </ul>
-  </div> -->
-  <!-- A QUI GIUSTO -->
-
   <div class="card">
     <div class="image">
       <img :src="store.baseURLimg + seriesInfo.poster_path" alt="No Image" />
@@ -43,22 +31,26 @@ export default {
         </h2>
         <p>{{ seriesInfo.original_language }}</p>
         <p>{{ seriesInfo.vote_average }}</p>
+        <font-awesome-icon
+          class="star"
+          v-for="star in ConvertVote(seriesInfo.vote_average)"
+          :key="star"
+          :icon="['fas', 'star']"
+        />
+        <template v-for="star in 5 - ConvertVote(seriesInfo.vote_average)">
+          <font-awesome-icon
+            class="star"
+            :key="star"
+            :icon="['far', 'star']"
+            v-if="ConvertVote(seriesInfo.vote_average) < 5"
+          />
+        </template>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-// ---DA QUI GIUSTO
-// .cardContent {
-//   width: calc((100% - 4rem) / 5);
-//   margin-top: 1.5rem;
-//   img {
-//     width: 100%;
-//   }
-// }
-// ---A QUI GIUSTO
-
 .card {
   position: relative;
   width: calc((100% - 4rem) / 5);
