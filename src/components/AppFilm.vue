@@ -39,6 +39,9 @@ export default {
           {{ filmInfo.title }}<br /><span>{{ filmInfo.original_title }}</span>
         </h2>
         <p>{{ filmInfo.original_language }}</p>
+        <!-- <p>
+          <country-flag :country="filmInfo.original_language" size="small" />
+        </p> -->
         <p>{{ filmInfo.vote_average }}</p>
         <p>
           <font-awesome-icon icon="fa-solid fa-star" />
