@@ -58,7 +58,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   position: relative;
-  width: calc((100% - 4rem) / 5);
+  width: calc((100% - 3rem) / 4);
   height: 400px;
   background: #000;
   border: 1px solid black;
