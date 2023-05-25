@@ -46,6 +46,9 @@ header {
     color: red;
     font-size: 1.8rem;
     font-weight: 700;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .inputSearch {
     width: 300px;
