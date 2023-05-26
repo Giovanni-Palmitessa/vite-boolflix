@@ -19,7 +19,7 @@ export default {
       <div class="logo">BOOLFLIX</div>
 
       <div class="searchbar">
-        <select v-model="store.searchGenre" @change="emitSearchEvent">
+        <select v-model="store.searchGenre">
           <option value="">Seleziona un genere</option>
           <option
             v-for="genre in store.genres"
