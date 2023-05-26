@@ -26,7 +26,7 @@ export default {
             :key="genre.genre_ids"
             :value="genre.genre_ids"
           >
-            {{ store.genres }}
+            {{ genre.name }}
           </option>
         </select>
         <input
