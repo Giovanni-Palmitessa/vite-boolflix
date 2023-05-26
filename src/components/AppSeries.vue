@@ -35,7 +35,9 @@ export default {
         <h2>
           {{ seriesInfo.name }}<br /><span>{{ seriesInfo.original_name }}</span>
         </h2>
-        <p><lang-flag :iso="seriesInfo.original_language" /></p>
+        <p>
+          <lang-flag :iso="seriesInfo.original_language" :squared="false" />
+        </p>
         <font-awesome-icon
           class="star"
           v-for="star in ConvertVote(seriesInfo.vote_average)"
