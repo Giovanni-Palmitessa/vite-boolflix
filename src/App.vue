@@ -47,22 +47,23 @@ export default {
         })
         .then((response) => (this.store.seriesList = response.data.results));
 
-      // axios
-      //   .get("https://api.themoviedb.org/3/search/movie", {
-      //     params: {
-      //       api_key: this.store.myKey,
-      //       include_adult: false,
-      //       language: "it-IT",
-      //       query: this.store.lastSearchedValue,
-      //       genre_ids: this.store.searchGenre,
-      //     },
-      //     headers: {
-      //       accept: "application/json",
-      //     },
-      //   })
-      //   .then((response) => (this.store.seriesList = response.data.results));
-
       this.store.searchStr = "";
+    },
+    filterContent() {
+      axios
+        .get("https://api.themoviedb.org/3/search/movie", {
+          params: {
+            api_key: this.store.myKey,
+            include_adult: false,
+            language: "it-IT",
+            query: this.store.lastSearchedValue,
+            genre_ids: this.store.searchGenre,
+          },
+          headers: {
+            accept: "application/json",
+          },
+        })
+        .then((response) => (this.store.filmList = response.data.results));
     },
   },
   created() {
@@ -92,7 +93,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader @performSearch="requestDataFromApi" />
+  <AppHeader @performSearch="requestDataFromApi" @filter="filterContent" />
   <AppMainContent />
 </template>
 
