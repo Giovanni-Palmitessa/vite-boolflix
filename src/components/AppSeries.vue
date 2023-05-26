@@ -36,8 +36,11 @@ export default {
           {{ seriesInfo.name }}<br /><span>{{ seriesInfo.original_name }}</span>
         </h2>
         <p>
+          Lingua:
           <lang-flag :iso="seriesInfo.original_language" :squared="false" />
-          <span class="lang-text">{{ seriesInfo.original_language }}</span>
+          <span class="lang-text"
+            >Lingua: {{ seriesInfo.original_language }}</span
+          >
         </p>
         <font-awesome-icon
           class="star"
