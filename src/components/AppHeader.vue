@@ -23,8 +23,8 @@ export default {
           <option value="">Seleziona un genere</option>
           <option
             v-for="genre in store.genres"
-            :key="genre.genre_ids"
-            :value="genre.genre_ids"
+            :key="genre.id"
+            :value="genre.id"
           >
             {{ genre.name }}
           </option>

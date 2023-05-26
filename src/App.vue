@@ -46,19 +46,20 @@ export default {
         })
         .then((response) => (this.store.seriesList = response.data.results));
 
-      axios
-        .get("https://api.themoviedb.org/3/genre/movie/list", {
-          params: {
-            api_key: this.store.myKey,
-          },
-          headers: {
-            accept: "application/json",
-          },
-        })
-        .then((response) => (this.store.genres = response.data.genres));
-
       this.store.searchStr = "";
     },
+  },
+  created() {
+    axios
+      .get("https://api.themoviedb.org/3/genre/movie/list", {
+        params: {
+          api_key: this.store.myKey,
+        },
+        headers: {
+          accept: "application/json",
+        },
+      })
+      .then((response) => (this.store.genres = response.data.genres));
   },
 };
 </script>
