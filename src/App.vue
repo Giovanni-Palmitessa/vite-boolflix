@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     requestDataFromApi() {
-      // this.store.lastSearchedValue = this.store.searchStr;
+      this.store.lastSearchedValue = this.store.searchStr;
       axios
         .get("https://api.themoviedb.org/3/search/movie", {
           params: {
