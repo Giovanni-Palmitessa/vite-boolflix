@@ -138,4 +138,8 @@ export default {
 .flag-icon-undefined + .lang-text {
   display: inline;
 }
+
+.star {
+  color: gold;
+}
 </style>
