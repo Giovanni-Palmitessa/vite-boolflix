@@ -19,8 +19,15 @@ export default {
       <div class="logo">BOOLFLIX</div>
 
       <div class="searchbar">
-        <select>
+        <select v-model="store.searchGenre" @change="emitSearchEvent">
           <option value="">Seleziona un genere</option>
+          <option
+            v-for="genre in store.genres"
+            :key="genre.genre_ids"
+            :value="genre.genre_ids"
+          >
+            {{ store.genres }}
+          </option>
         </select>
         <input
           class="inputSearch"

@@ -23,6 +23,7 @@ export default {
             include_adult: false,
             language: "it-IT",
             query: this.store.searchStr,
+            genre_ids: this.store.searchGenre,
           },
           headers: {
             accept: "application/json",
@@ -37,12 +38,24 @@ export default {
             include_adult: true,
             language: "it-IT",
             query: this.store.searchStr,
+            genre_ids: this.store.searchGenre,
           },
           headers: {
             accept: "application/json",
           },
         })
         .then((response) => (this.store.seriesList = response.data.results));
+
+      axios
+        .get("https://api.themoviedb.org/3/genre/movie/list", {
+          params: {
+            api_key: this.store.myKey,
+          },
+          headers: {
+            accept: "application/json",
+          },
+        })
+        .then((response) => (this.store.genres = response.data.genres));
 
       this.store.searchStr = "";
     },
