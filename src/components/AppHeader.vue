@@ -19,6 +19,9 @@ export default {
       <div class="logo">BOOLFLIX</div>
 
       <div class="searchbar">
+        <select>
+          <option value="">Seleziona un genere</option>
+        </select>
         <input
           class="inputSearch"
           type="text"
