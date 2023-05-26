@@ -9,4 +9,5 @@ export const store = reactive({
   baseURLimg: "https://image.tmdb.org/t/p/w342",
   searchStr: "",
   searchGenre: "",
+  searchTv: "",
 });

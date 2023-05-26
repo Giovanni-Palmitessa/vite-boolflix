@@ -20,13 +20,24 @@ export default {
 
       <div class="searchbar">
         <select v-model="store.searchGenre">
-          <option value="">Seleziona un genere</option>
+          <option value="">Seleziona un genere per i film</option>
           <option
             v-for="genre in store.genres"
             :key="genre.id"
             :value="genre.id"
           >
             {{ genre.name }}
+          </option>
+        </select>
+
+        <select v-model="store.searchTV">
+          <option value="">Seleziona un genere per le serie</option>
+          <option
+            v-for="genreTV in store.genresTV"
+            :key="genreTV.id"
+            :value="genreTV.id"
+          >
+            {{ genreTV.name }}
           </option>
         </select>
         <input
