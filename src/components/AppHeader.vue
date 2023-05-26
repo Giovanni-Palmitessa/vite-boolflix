@@ -10,10 +10,6 @@ export default {
     emitSearchEvent() {
       this.$emit("performSearch");
     },
-
-    emitFilter() {
-      this.$emit("filter");
-    },
   },
 };
 </script>
@@ -23,7 +19,7 @@ export default {
       <div class="logo">BOOLFLIX</div>
 
       <div class="searchbar">
-        <select v-model="store.searchGenre" @change="emitFilter">
+        <select v-model="store.searchGenre">
           <option value="">Seleziona un genere per i film</option>
           <option
             v-for="genre in store.genres"

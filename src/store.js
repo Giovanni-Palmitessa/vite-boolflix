@@ -10,5 +10,4 @@ export const store = reactive({
   searchStr: "",
   searchGenre: "",
   searchTv: "",
-  lastSearchedValue: "",
 });
