@@ -37,6 +37,7 @@ export default {
         </h2>
         <p>
           <lang-flag :iso="seriesInfo.original_language" :squared="false" />
+          <span class="lang-text">{{ seriesInfo.original_language }}</span>
         </p>
         <font-awesome-icon
           class="star"
@@ -121,5 +122,17 @@ export default {
   margin: 10px 0;
   padding: 0;
   color: #262626;
+}
+
+.lang-text {
+  display: none;
+}
+
+.flag-icon-undefined {
+  display: none;
+}
+
+.flag-icon-undefined + .lang-text {
+  display: inline;
 }
 </style>

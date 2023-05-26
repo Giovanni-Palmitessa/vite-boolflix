@@ -35,7 +35,11 @@ export default {
         <h2>
           {{ filmInfo.title }}<br /><span>{{ filmInfo.original_title }}</span>
         </h2>
-        <p><lang-flag :iso="filmInfo.original_language" :squared="false" /></p>
+        <p>
+          <lang-flag :iso="filmInfo.original_language" :squared="false" />
+          <span class="lang-text">{{ filmInfo.original_language }}</span>
+        </p>
+
         <font-awesome-icon
           class="star"
           v-for="star in ConvertVote(filmInfo.vote_average)"
@@ -119,5 +123,16 @@ export default {
   margin: 10px 0;
   padding: 0;
   color: #262626;
+}
+.lang-text {
+  display: none;
+}
+
+.flag-icon-undefined {
+  display: none;
+}
+
+.flag-icon-undefined + .lang-text {
+  display: inline;
 }
 </style>
