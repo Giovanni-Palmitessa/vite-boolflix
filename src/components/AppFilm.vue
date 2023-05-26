@@ -36,8 +36,11 @@ export default {
           {{ filmInfo.title }}<br /><span>{{ filmInfo.original_title }}</span>
         </h2>
         <p>
+          Lingua:
           <lang-flag :iso="filmInfo.original_language" :squared="false" />
-          <span class="lang-text">{{ filmInfo.original_language }}</span>
+          <span class="lang-text"
+            >Lingua: {{ filmInfo.original_language }}</span
+          >
         </p>
 
         <font-awesome-icon
