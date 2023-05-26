@@ -60,6 +60,17 @@ export default {
         },
       })
       .then((response) => (this.store.genres = response.data.genres));
+
+    axios
+      .get("https://api.themoviedb.org/3/genre/tv/list", {
+        params: {
+          api_key: this.store.myKey,
+        },
+        headers: {
+          accept: "application/json",
+        },
+      })
+      .then((response) => (this.store.genres = response.data.genres));
   },
 };
 </script>
